@@ -1,0 +1,21 @@
+.form-oculto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form-oculto > div{
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid #572364;
+}
+.form-oculto p{
+    margin:0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.form-oculto button{
+    width: 10%;
+}
+.card-body button.btn.btn-primary{
+    margin-top: 2%;
+}

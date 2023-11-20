@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-body">
+
+        <form (ngSubmit)="enviarF()" #alumnosForm="ngForm">  
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" required 
+            [(ngModel)]="persona.id" name="id" >
+            <div class="mb-2">
+                <label class="form-label">Nombre:</label>
+                <input type="text" name="fnombre" id="fnombre" class="form-control" placeholder="Ingresa un nombre" [(ngModel)]="persona.nombre">
+            </div>
+            <div>
+                <label class="form-label">Edad:</label>
+                <input type="text"  name="fedad" id="fedad" class="form-control" placeholder="Ingresa tu edad" [(ngModel)]="persona.edad">
+            </div>
+            <div>
+                <label class="form-label">Correo</label>
+                <input type="text" name="fcorreo" id="fcorreo" class="form-control" placeholder="Ingresa tu correo"  [(ngModel)]="persona.correo">
+            </div>
+            <div>
+                <label for="semestre" class="form-label">Semestre</label>
+                <select class="form-control" id="semestre" required 
+                [(ngModel)]="persona.semestre" name="semestre" >
+            <option *ngFor="let semestre of cantsemestres" [value]="semestre">
+                {{semestre}}
+            </option>
+        </select>
+            </div>
+            <button class="btn btn-primary" [disabled]="!alumnosForm.form.valid">Enviar</button>
+        </form> 
+
+    </div>
+
+    <div class="form-oculto" [hidden]="!enviado">
+        <h2>Formulario enviado</h2>
+        <div> <p>ID:{{persona.id}}</p></div>
+        <div> <p>Nombre:{{persona.nombre}}</p></div>
+        <div> <p>Edad:{{persona.edad}}</p></div>
+        <div> <p>Correo:{{persona.correo}}</p></div>
+        <div> <p>Semestre:{{persona.semestre}}</p></div>
+        <button class="btn btn-primary" (click)="enviado=false">Editar</button>
+    </div>
+
+</div>

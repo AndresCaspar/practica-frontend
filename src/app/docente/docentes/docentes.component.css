@@ -1,0 +1,15 @@
+#tips{
+    padding: 2% 0;
+  }
+  #tips .container{
+    border: 3px solid #9a26ff;
+    padding: 2% 5%;
+  }
+  #tips p{
+    font-size: 20px;
+    text-align: justify;
+  }
+  #tips .text{
+    font-family: 'Gotham-Black';
+        font-weight: 300;
+  }

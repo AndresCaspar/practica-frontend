@@ -1,0 +1,13 @@
+footer{
+    background: #340606;
+}
+footer#footercito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+footer p{
+    color: #fff;
+    margin: 1% 0;
+}
